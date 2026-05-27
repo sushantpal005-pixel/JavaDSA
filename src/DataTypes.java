@@ -13,7 +13,7 @@ public class DataTypes {
         // Numeric DT - short, byte, int, long
         byte num1 = 50;
         long newNum = num1;
-        System.out.println("new num: " + newNum);
+        System.out.println("new num is " + newNum);
         System.out.println(num1);
 
         short num2 = 500;
