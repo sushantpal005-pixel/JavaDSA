@@ -2,10 +2,38 @@ package OOPS.lec_17;
 
 public class Student {
     //Attributes
-    public int id;
-    public int age;
-    public String name;
-    public int nos;
+    private int id;
+    private int age;
+    private String name;
+    private int nos;
+    private String gf;
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void setAge(int age) {
+        if(age < 100){
+            this.age = age;
+        }
+        return;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public int getNos() {
+        return this.nos;
+    }
+
+    public String getGf() {
+        return this.gf;
+    }
 
     //Default ctor
     public Student(){
@@ -13,12 +41,13 @@ public class Student {
     }
 
     //Parameterised ctor
-    public Student(int id, int age, String name, int nos){
+    public Student(int id, int age, String name, int nos, String gf){
         System.out.println("Student Parameterised ctor Called");
         this.id = id;
         this.age = age;
         this.name = name;
         this.nos = nos;
+        this.gf = gf;
     }
 
     //Copy ctor
@@ -39,5 +68,8 @@ public class Student {
     }
     public void bunk(){
         System.out.println(name + " Bunking");
+    }
+    private void gfChatting(){
+        System.out.println("gfChatting");
     }
 }
