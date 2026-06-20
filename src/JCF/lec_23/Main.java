@@ -79,5 +79,10 @@ public class Main {
         System.out.println(newList.isEmpty());
         System.out.println(marks.isEmpty());
         System.out.println(newList.indexOf(40));
+
+
+
+
+
     }
 }
