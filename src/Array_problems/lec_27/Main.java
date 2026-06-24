@@ -1,5 +1,9 @@
 package Array_problems.lec_27;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
     //Problem-1
     static double getAverage(int[] arr){
@@ -84,10 +88,71 @@ public class Main {
         }
         return -1;
     }
-    static void main() {
 
-        int arr[] = {1,2,5,4,9};
-        System.out.println(getUnsortedElement(arr));
+    //Problem-8
+    static int[] swapArray(int[] arr){
+        for (int i = 0; i < arr.length-1; i=i+2) {
+                int num = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = num;
+        }
+        return arr;
+    }
+
+    //Problem-9
+    static int[] intersection(int[] arr, int[] brr){
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+
+        for(int num : arr){
+            set1.add(num);
+        }
+
+        for (int num : brr){
+            if(set1.contains(num)){
+                set2.add(num);
+            }
+        }
+
+        int[] res = new int[set2.size()];
+        int i = 0;
+        for (int num : set2){
+            res[i++] = num;
+        }
+        return res;
+    }
+
+    //Problem-10
+    static int[] alternate(int[] arr){
+        int res[] = new int[arr.length];
+        int left = 0;
+        int right = arr.length-1;
+        int i = 0;
+        while(left < right){
+            if(left == right){
+                break;
+            }
+            res[i] = arr[left];
+            res[i+1] = arr[right];
+            left++;
+            right--;
+            i+=2;
+        }
+        return res;
+    }
+    static void main() {
+        int arr[] = {1,2,5,4,9,8,0};
+        int res[] = alternate(arr);
+        System.out.println(Arrays.toString(res));
+//        int brr[] = {2, 5, 89, 0};
+//        int res[] = intersection(arr, brr);
+//        System.out.println(Arrays.toString(res));
+//        int ans[] = swapArray(arr);
+//        for (int i : ans) {
+//            System.out.println(i);
+//        }
+
+//        System.out.println(getUnsortedElement(arr));
 
 //        int arr[] = {0, 1, 0, 0, 1};
 //        int ans[] = count0and1(arr);
