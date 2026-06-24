@@ -99,24 +99,42 @@ public class Main {
     }
 
 //    //Problem-6
-//    static int[] shifByK(int[] arr, int k){
-//        int[] temp = new int[k];
-//        int i = 0;
-//        for (int j = arr.length-k; j < arr.length-1 ; j++) {
-//            temp[i++] = arr[j];
-//        }
-//        for (int j = arr.length-1; j > 0; j--) {
-//            arr[j] = arr[j-2];
-//        }
-//        for (int j = 0; j < temp.length-1; j++) {
-//            arr[j] = temp[j];
-//        }
-//        return arr;
-//    }
+    static int[] shifByK(int[] arr, int k){
+        int n = arr.length;
+        k = k % n;
+        int[] temp = new int[k];
+
+        for (int i = 0; i < k; i++) {
+            temp[i] = arr[n-k+i];
+        }
+        for (int i = n-k-1; i >= 0. ; i--) {
+            arr[i+k] = arr[i];
+        }
+        for (int i = 0; i < k; i++) {
+            arr[i] = temp[i];
+        }
+        return arr;
+    }
+
+    //Problem-7
+    static void union(int[] arr, int brr[]){
+        HashSet<Integer> union = new HashSet<>();
+        for (int num : arr){
+            union.add(num);
+        }
+        for (int num : brr){
+            union.add(num);
+        }
+        System.out.println(union);
+    }
 
     static void main() {
 
-//        int arr[] = {1, 2, 3, 4, 5, 6};
+        int arr[] = {1,2,4,8,7};
+        int brr[] = {6,10,89,9,7,8};
+        union(arr,brr);
+
+//        int arr[] = {1, 2, 3, 4, 5};
 //        int ans[] = shifByK(arr, 2);
 //        System.out.println(Arrays.toString(ans));
 //        int arr[] = {1, 2, 2, 4, 4, 4, 8, 8};
