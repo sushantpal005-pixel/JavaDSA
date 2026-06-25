@@ -130,9 +130,9 @@ public class Main {
 
     static void main() {
 
-        int arr[] = {1,2,4,8,7};
-        int brr[] = {6,10,89,9,7,8};
-        union(arr,brr);
+//        int arr[] = {1,2,4,8,7};
+//        int brr[] = {6,10,89,9,7,8};
+//        union(arr,brr);
 
 //        int arr[] = {1, 2, 3, 4, 5};
 //        int ans[] = shifByK(arr, 2);
