@@ -33,7 +33,7 @@ public class Main {
         }
         return ans;
     }
-    static int binarySearch(int[] nums, int start, int end, int target) {
+    static  int binarySearch(int[] nums, int start, int end, int target) {
         int n = nums.length;
         int mid = start + (end - start) / 2;
 
@@ -56,6 +56,7 @@ public class Main {
         //if this line reached then target is not found
         return -1;
     }
+    //search in rotated sorted array
     static int search(int[] nums, int target) {
         int pivotIndex = findPivotIndex(nums);
         int n = nums.length;
