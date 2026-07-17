@@ -5,9 +5,19 @@ import java.util.Arrays;
 public class Main {
     static boolean isValidAns(int[] stalls, int k, int minDistance) {
         //brute force
+        int cowCount = 1;
+        int lastPosition = 0;
 
-        return true;
-
+        for (int i = 1; i <= stalls.length-1; i++) {
+            if (stalls[i] - stalls[lastPosition] >= minDistance) {
+                cowCount++;
+                lastPosition = i;
+            }
+            if (cowCount == k) {
+                return true;
+            }
+        }
+        return false;
     }
     static int aggressiveCows(int[] stalls, int k){
         Arrays.sort(stalls);
@@ -35,7 +45,7 @@ public class Main {
     }
 
     static void main() {
-        int[] arr = {1,2,8,4,9};
+        int[] arr = {1,2,4,8,9};
         System.out.println(aggressiveCows(arr, 3));
     }
 }
