@@ -57,8 +57,14 @@ public class Main {
         return ans;
     }
 
+    static String replaceAllOccurences(String s, String sub){
+        String res = s.replaceAll(sub, " ");
+        return res;
+    }
+
     static void main() {
         System.out.println(reverseWords("my name is sushant"));
         System.out.println(getMaxOccuringChar("sushant"));
+        System.out.println(replaceAllOccurences("sushantxxsushantxxpal", "xx"));
     }
 }
