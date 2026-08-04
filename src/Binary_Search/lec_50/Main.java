@@ -17,6 +17,7 @@ public class Main {
             return arr[index];
         }
     }
+
     static int unboundedSearch(InfinityArray arr, int target){
         if(arr.get(0) == target){
             return 0;
