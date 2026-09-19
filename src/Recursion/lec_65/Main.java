@@ -26,7 +26,7 @@ public class Main {
         return ans;
     }
 
-    static void main() {
-        System.out.println(canJump(new int[]{1, 1, 3}));
-    }
+//    static void main() {
+//        System.out.println(canJump(new int[]{1, 1, 3}));
+//    }
 }
