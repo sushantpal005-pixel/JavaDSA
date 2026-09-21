@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.lec_66;
 import java.util.*;
 public class lec_66 {
     static int solve(List<List<Integer>> triangle, int rowIndex, int colIndex){
