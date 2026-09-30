@@ -64,4 +64,8 @@ public class Main {
         //merge both the halves
         merge(arr, s, e, mid);
     }
+
+    static void main() {
+        mergeSort(new int[]{4, 8923, 342, 1, 2, 5}, 0, 5);
+    }
 }
